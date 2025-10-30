@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Maligno: A Ascensão do TROLL (Versão Final)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div id="placar">
+            <button id="btnReiniciarNivel" class="btn-placar hidden">Reiniciar Nível</button>
+            <span id="vidasDisplay"></span> |
+            <span id="nivelDisplay"></span> |
+            <span id="mortesDisplay"></span>
+        </div>
+
+        <div id="telaInicial" class="tela">
+            <h1 class="titulo-jogo">LEVEL MALIGNO</h1>
+            <h2 class="subtitulo">A Ascensão do TROLL</h2>
+            <p>40 Fases de Plataforma Não-Linear</p>
+            <p class="dica-controles">Use W, A, D ou Setas | Espaço ou W para Pular (PULO DUPLO ATIVO)</p>
+            <button id="btnJogar" class="btn-menu">JOGAR</button>
+        </div>
+
+        <div id="telaFinal" class="tela hidden">
+            <h1 id="tituloFinal"></h1>
+            <p id="mensagemFinal"></p>
+            <button id="btnJogarNovamente" class="btn-menu">JOGAR DE NOVO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0d0d0d;
+    font-family: 'Press Start 2P', monospace;
+    color: white;
+    text-align: center;
+}
+
+#gameContainer {
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.4);
+    border-radius: 5px;
+}
+
+#gameCanvas {
+    border: 5px solid #ff4500;
+    background-color: #111;
+    display: block;
+}
+
+#placar {
+    padding: 10px 0;
+    font-size: 0.8em;
+    color: #ffd700;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estilo para o Botão de Reiniciar Nível no Placar */
+
+.btn-placar {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-family: inherit;
+    background-color: #555;
+    color: white;
+    border: 2px solid #777;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.btn-placar:hover {
+    background-color: #777;
+}
+
+
+/* Telas de Menu (Inicial/Final) */
+
+.tela {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+
+/* Classe vital para esconder as telas (usada pelo JS) */
+
+.hidden {
+    display: none !important;
+}
+
+.titulo-jogo {
+    font-size: 2.2em;
+    color: #ff4500;
+    text-shadow: 2px 2px #ff1a1a;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #ffd700;
+    margin-bottom: 40px;
+}
+
+.btn-menu {
+    padding: 15px 30px;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #2e7d32;
+    color: white;
+    border: 4px solid #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 25px;
+    box-shadow: 0 5px #1b5e20;
+}
+
+.btn-menu:hover {
+    background-color: #388e3c;
+    box-shadow: 0 2px #1b5e20;
+    transform: translateY(3px);
+}
+
+.dica-controles {
+    font-size: 0.7em;
+    color: #aaa;
+    margin-top: 50px;
+}
