@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Ciano Final - RGB</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="jogoContainer">
+        <div id="placar">
+            <span id="vidasDisplay">Vidas: 5</span>
+            <span id="mortesDisplay">Mortes: 0</span>
+            <span id="nivelDisplay">Nível: 1</span>
+            <button id="btnReiniciarNivel" class="hidden">Reiniciar Nível</button>
+        </div>
+
+        <canvas id="gameCanvas" width="1400" height="500"></canvas>
+
+        <div id="telaInicial" class="tela">
+            <h2>Bem-vindo ao Jogo de Plataforma Ciano!</h2>
+            <p>Use WAD ou Setas para Mover/Pular (Pulo Duplo).</p>
+            <button id="btnJogar">JOGAR</button>
+        </div>
+
+        <div id="telaFinal" class="tela hidden">
+            <h2 id="tituloFinal"></h2>
+            <p id="mensagemFinal"></p>
+            <button id="btnJogarNovamente">JOGAR DE NOVO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

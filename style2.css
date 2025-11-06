@@ -1,0 +1,107 @@
+:root {
+    --rgb-speed: 5s;
+}
+
+@keyframes rainbow {
+    0% { border-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    16.6% { border-color: #FFFF00; box-shadow: 0 0 40px #FFFF00; }
+    33.3% { border-color: #00FF00; box-shadow: 0 0 40px #00FF00; }
+    50% { border-color: #00FFFF; box-shadow: 0 0 40px #00FFFF; }
+    66.6% { border-color: #0000FF; box-shadow: 0 0 40px #0000FF; }
+    83.3% { border-color: #FF00FF; box-shadow: 0 0 40px #FF00FF; }
+    100% { border-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Aumenta o contêiner do jogo para 1400px */
+#jogoContainer {
+    width: 1400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    position: relative; 
+}
+
+/* Aumenta o canvas para 1400x500 */
+#gameCanvas {
+    background-color: #000; 
+    display: block;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+#placar {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #333;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+}
+
+#placar span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #00FFFF;
+}
+
+/* Telas de Estado (Inicial/Final) */
+.tela {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 40px 70px; /* TELA MAIOR */
+    border: 3px solid #00FFFF;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    max-width: 90%;
+    /* RGB/ARCO-ÍRIS na Borda */
+    animation: rainbow var(--rgb-speed) infinite alternate;
+}
+
+.tela h2 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00FFFF;
+}
+
+.tela button {
+    background-color: #00FFFF;
+    color: #121212;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.tela button:hover {
+    background-color: #32cd32;
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none !important;
+}
